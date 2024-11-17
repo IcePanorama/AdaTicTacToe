@@ -1,0 +1,8 @@
+# Project-specific
+tictactoe
+
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
