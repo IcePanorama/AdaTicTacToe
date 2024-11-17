@@ -1,8 +1,6 @@
 with Ada.Text_IO;
 
 package body TicTacToe_board is
-        use Ada.Text_IO;
-
         function Create_board return Board is
                 output : Board :=
                        ((' ', ' ', ' '), (' ', ' ', ' '), (' ', ' ', ' '));
@@ -13,12 +11,11 @@ package body TicTacToe_board is
         procedure Draw_board (B : in Board) is
         begin
                 for Row in 1 .. 3 loop
-                        Put ("| ");
+                        Ada.Text_IO.Put ("| ");
                         for Col in 1 .. 3 loop
-                                Put (B (Row, Col) & " | ");
-                                --Put ("| ");
+                                Ada.Text_IO.Put (B (Row, Col) & " | ");
                         end loop;
-                        New_Line;
+                        Ada.Text_IO.New_Line;
                 end loop;
         end Draw_board;
 end TicTacToe_board;
